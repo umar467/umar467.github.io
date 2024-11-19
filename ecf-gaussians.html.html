@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="soon">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ECF-Gaussians: Efficient 3D Gaussian Splatting with Coarse-to-Fine Optimization</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script> -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <!-- <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet"> -->
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <!-- <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"> -->
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="./static/css/comparison.css">
+  <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
+
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <title>Image Centering</title>
+    <style>
+        .image-container {
+            text-align: center;
+        }
+        .image-container img {
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+<!-- authors -->
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">ECF-Gaussians: Efficient 3D Gaussian Splatting with Coarse-to-Fine Optimization</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="">Umar Farooq</a></span>&nbsp;&nbsp;
+            <span class="author-block">
+              <a href="">Jean-Yves Guillemaut</a>&nbsp;&nbsp;
+            </span>
+            <span class="author-block">
+              <a href="">Adrian Hilton</a>&nbsp;&nbsp;
+            </span>
+            <span class="author-block">
+              <a href="">Marco Volino</a>&nbsp;&nbsp;
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">CVSSP, University of Surrey</span>&nbsp;&nbsp;
+            <br>
+            <span class="email-link">
+              <a href="mailto:m.farooq@surrey.ac.uk">m.farooq@surrey.ac.uk</a>
+              &nbsp;&nbsp;
+              <a href="mailto:m.volino@surrey.ac.uk">m.volino@surrey.ac.uk</a>
+            </span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="paper/ecf_gaussians_cvmp_short.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!--<span class="link-block">
+                <a href="paper/ecf_gaussians_cvmp_short.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span> -->
+              <!-- Video Link. -->
+              <!-- <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+              <!-- Code Link. -->
+              <!-- <span class="link-block">
+                <a href="https://github.com/zju3dv/PGSR"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span> -->
+              <!-- Dataset Link. -->
+              <!-- <span class="link-block">
+                <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a> -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- teaser.png -->
+<!-- <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img id="teaser" height="100%" src="./static/images/teaser.png" alt="ND-SDF teaser."/>
+      <p>
+        We present <b>ND-SDF</b>, a framework for high-fidelity 3D indoor surface reconstruction from multi-views. Shown above is an extracted mesh from ScanNet++.
+      </p>
+    </div>
+  </div>
+</section> -->
+
+<!-- Video -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3" style="text-align: center;">Overview</h2>
+    <video controls width="100%" height="100%" src="./static/videos/cvmp_short_paper_34.mp4" type="video/mp4" autoplay muted loop playsinline></video> 
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            3D Gaussian Splatting (3DGS) is an explicit pointbased novel view synthesis technique that achieves high visual quality and
+fast training times. However, 3DGS suffers from high memory and storage usage limiting its applicability across various device form factors. In this context, we introduce a novel and efficient 3DGS coarse-tofine optimization strategy. Our method reduces the memory overhead of
+3DGS by initiating the training process with significant over-reconstruction,
+which serves as an effective regularizer, and progressively refines the
+scene representation. Our approach also produces stand-alone scene representations at each level-of-detail in the progressive refining process, enabling variable storage, transmission, and rendering based on the downstream requirements.
+</p>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Method</h2>
+        <div class="content has-text-justified">
+          <img src="./static/images/Method_Diagram_99.png"
+               class="framework-image"
+               alt="PGSR overview."/>
+          <!-- Video -->
+               <p>
+            We employ a progressive frequency control strategy with
+five distinct image and scene quality levels In and Gn respectively in range
+n = (1 − 5). We
+start by applying the blur with a large kernel size to the training images,
+reducing their detail and noise. This initial reduction in detail allows the
+model to focus on learning the broader, more significant structures of the
+scene. As the training progresses, the level of blur is gradually reduced
+by reducing the size of the blur filter which reintroduces higher frequency
+details in a controlled manner.
+          </p>
+
+
+        <h2 class="title is-3">Results</h2>
+        <img src="./static/images/Slide2.PNG"
+        class="framework-image"
+        alt="PGSR overview."/>
+
+        <br/>
+      <div class="image-container">
+            <img style="width: 100%;" src="./static/images/cvmp_table.png"/>
+            </object>
+      </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr>
+<!-- Comparisons -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3" style="text-align: center;">Interactive Visualization</h2>
+      <!-- DTU -->
+      <div class="content">
+        
+        <div class="cmp-container" id="cmp1">
+            <div class="bottom">
+                <img src="./static/images/cmp/3dgs/6_3DGS.png"/>
+            </div>
+            <div class="top">
+                <img src="./static/images/cmp/ours/5_30k.png"/>
+            </div>
+            <div class="cmp-slider"></div>
+        </div>
+
+
+        <div class="cmp-container" id="cmp1">
+          <div class="bottom">
+              <img src="./static/images/cmp/3dgs/5_3DGS.png"/>
+          </div>
+          <div class="top">
+              <img src="./static/images/cmp/ours/4_30k.png"/>
+          </div>
+          <div class="cmp-slider"></div>
+      </div>
+
+
+
+      </div>
+        
+      
+      
+
+  <script src="./static/js/comparison.js"></script>
+  </div>
+</section>
+
+
+<!-- <section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>
+      @article{chen2024pgsr,
+        title={PGSR: Planar-based Gaussian Splatting for Efficient and High-Fidelity Surface Reconstruction},
+        author={Danpeng Chen and Hai Li and Weicai Ye and Yifan Wang and Weijian Xie and Shangjin Zhai and Nan Wang and Haomin Liu and Hujun Bao and Guofeng Zhang},
+          booktitle={arxiv preprint arxiv:2406.06521}, 
+          year={2024}
+      }
+      ```</code></pre>
+  </div>
+</section> -->
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <!-- <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a> -->
+      <!-- <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a> -->
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            We thank <a href="https://github.com/nerfies/nerfies.github.io" target="_blank">Nerfies</a> for their amazing template.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
