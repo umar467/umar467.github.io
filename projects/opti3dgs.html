@@ -10,14 +10,14 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
-  <link rel="stylesheet" href="./static/css/bulma.min.css">
-  <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="stylesheet" href="./static/css/comparison.css">
+  <link rel="stylesheet" href="./opti3dgs/css/bulma.min.css">
+  <link rel="stylesheet" href="./opti3dgs/css/index.css">
+  <link rel="stylesheet" href="./opti3dgs/css/comparison.css">
 
-  <script defer src="./static/js/fontawesome.all.min.js"></script>
-  <script src="./static/js/bulma-carousel.min.js"></script>
-  <script src="./static/js/bulma-slider.min.js"></script>
-  <script src="./static/js/index.js"></script>
+  <script defer src="./opti3dgs/js/fontawesome.all.min.js"></script>
+  <script src="./opti3dgs/js/bulma-carousel.min.js"></script>
+  <script src="./opti3dgs/js/bulma-slider.min.js"></script>
+  <script src="./opti3dgs/js/index.js"></script>
 </head>
 <body>
 
@@ -82,7 +82,7 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body" style="padding-top: 0;">
-      <img class="teaser-image" width="100%" src="./static/images/teaser.png" alt="Opti3DGS teaser"/>
+      <img class="teaser-image" width="100%" src="./opti3dgs/images/teaser.png" alt="Opti3DGS teaser"/>
       <p class="teaser-caption">
         <b>Opti3DGS</b> progressively grows levels to reduce redundant and unused Gaussians while maintaining accurate geometric structure and competitive quality.
       </p>
@@ -116,7 +116,7 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Method</h2>
-        <img class="teaser-image" width="100%" src="./static/images/diagram.png" alt="Method diagram"/>
+        <img class="teaser-image" width="100%" src="./opti3dgs/images/diagram.png" alt="Method diagram"/>
         <p class="method-caption">
           We start with a uniform distribution of larger Gaussians as compared to 3DGS, which starts heavy densification from the very start of optimization, thus complicating the loss landscape. The zoomed views show efficient use of the initial sparse point cloud by our approach.
         </p>
@@ -136,14 +136,14 @@
         
         <div class="ablation-container">
           <div class="ablation-item">
-            <img src="./static/images/abl.png" alt="Ablation study results"/>
+            <img src="./opti3dgs/images/abl.png" alt="Ablation study results"/>
             <p class="ablation-caption">
               <b>(a)</b> Impact of using different decay rate functions to control the kernel size for image filtering. Combining step decay function with the mean filter performs best and is adopted across all experiments. Each point represents the average score for the respective dataset.
             </p>
           </div>
           
           <div class="ablation-item">
-            <img src="./static/images/cur.png" alt="Decay rate visualization"/>
+            <img src="./opti3dgs/images/cur.png" alt="Decay rate visualization"/>
             <p class="ablation-caption">
               <b>(b)</b> Visualization of different decay rates. The vertical axis shows the current kernel size for the filtering algorithm at any given iteration. Frequency modulation stops after 12,000 iterations, with full-sized images passed for the remaining 18,000 iterations.
             </p>
@@ -166,26 +166,26 @@
     <div class="content">
       <div class="cmp-container" id="cmp1" style="margin-bottom: 2rem;">
         <div class="bottom">
-          <img src="./static/images/cmp/3dgs/6_3DGS.png"/>
+          <img src="./opti3dgs/images/cmp/3dgs/6_3DGS.png"/>
         </div>
         <div class="top">
-          <img src="./static/images/cmp/ours/5_30k.png"/>
+          <img src="./opti3dgs/images/cmp/ours/5_30k.png"/>
         </div>
         <div class="cmp-slider"></div>
       </div>
 
       <div class="cmp-container" id="cmp2">
         <div class="bottom">
-          <img src="./static/images/cmp/3dgs/5_3DGS.png"/>
+          <img src="./opti3dgs/images/cmp/3dgs/5_3DGS.png"/>
         </div>
         <div class="top">
-          <img src="./static/images/cmp/ours/4_30k.png"/>
+          <img src="./opti3dgs/images/cmp/ours/4_30k.png"/>
         </div>
         <div class="cmp-slider"></div>
       </div>
     </div>
   </div>
-  <script src="./static/js/comparison.js"></script>
+  <script src="./opti3dgs/js/comparison.js"></script>
 </section>
 
 <!-- BibTeX -->
